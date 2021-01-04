@@ -4,6 +4,6 @@ export class BookDetail {
   genre: string = ' ';
   authorName: string = ' ';
   publisherName: string = ' ';
-  bookCost: number = 0;
+  // bookCost: number = 0;
   edition: string = ' ';
 }
