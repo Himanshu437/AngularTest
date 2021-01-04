@@ -1,0 +1,46 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+  <input type="hidden" name="BookID" [value]="service.formData.BookID" />
+  <div class="form-group">
+    <label>Book Name</label>
+    <input class="form-control form-control-lg" placeholder="Book Name" name="bookName"
+           #bookName="ngModel" [(ngModel)]="service.formData.bookName"
+           required [class.invalid]="bookName.invalid &#038;&#038; bookName.touched">
+  </div>
+  <div class="form-group">
+    <label>Genre</label>
+    <input class="form-control form-control-lg" placeholder="Genre" name="genre"
+           #genre="ngModel" [(ngModel)]="service.formData.genre"
+           required [class.invalid]="genre.invalid &#038;&#038; genre.touched">
+  </div>
+  
+    <div class="form-group  ">
+      <label>Author Name</label>
+      <input class="form-control form-control-lg" placeholder="Author Name" name="authorName"
+             #authorName="ngModel" [(ngModel)]="service.formData.authorName"
+             required [class.invalid]="authorName.invalid &#038;&#038; authorName.touched">
+    </div>
+    <div class="form-group ">
+      <label>Publisher Name</label>
+      <input class="form-control form-control-lg" placeholder="Publisher Name" name="publisherName"
+             #publisherName="ngModel" [(ngModel)]="service.formData.publisherName"
+             required [class.invalid]="publisherName.invalid &#038;&#038; publisherName.touched">
+    </div>
+  
+ 
+    <div class="form-group ">
+      <label>Book Cost</label>
+      <input class="form-control form-control-lg" placeholder="Book Cost" name="bookCost"
+             #bookCost="ngModel" [(ngModel)]="service.formData.bookCost"
+             required [class.invalid]="bookCost.invalid &#038;&#038; bookCost.touched">
+    </div>
+    <div class="form-group ">
+      <label>Edition</label>
+      <input class="form-control form-control-lg" placeholder="Edition" name="edition"
+             #edition="ngModel" [(ngModel)]="service.formData.edition"
+             required [class.invalid]="edition.invalid &#038;&#038; edition.touched">
+    </div>
+  
+  <div class="form-group">
+    <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+  </div>
+</form>
