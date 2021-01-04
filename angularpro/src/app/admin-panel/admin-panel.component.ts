@@ -16,6 +16,10 @@ export class AdminPanelComponent implements OnInit {
     localStorage.removeItem('token');
     this.router.navigate(['/user/login']);
   }
+  bookInventory() {
+    
+    this.router.navigate(['/bookdetails']);
+  }
 }
 
 
